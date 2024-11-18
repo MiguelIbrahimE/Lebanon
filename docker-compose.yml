@@ -1,25 +1,4 @@
-
 services:
-  frontend:
-    build:
-      context: ./frontend
-    ports:
-      - "3000:80"  # Access the frontend at localhost:3000
-    depends_on:
-      - backend
-    environment:
-      - REACT_APP_API_URL=http://localhost:5000  # Or wherever your backend is
-
-  backend:
-    build:
-      context: ./backend
-    ports:
-      - "5000:5000"  # Access the backend at localhost:5000
-    depends_on:
-      - db
-    environment:
-      - DATABASE_URL=postgresql://user:password@db:5432/mydatabase  # Update with actual credentials
-
   db:
     image: postgres:13
     environment:
@@ -28,7 +7,32 @@ services:
       POSTGRES_DB: mydatabase
     volumes:
       - db_data:/var/lib/postgresql/data
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql  # If you have SQL initialization
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql  # Optional SQL initialization
+
+  frontend:
+    build:
+      context: ./fe
+    ports:
+      - "3000:3000"  # Access the frontend at localhost:3000
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000  # Endpoint for backend
+    volumes:
+      - ./fe/src:/app/src  # Correct mounting to match expected structure
+      - /app/node_modules  # To avoid overwriting node_modules
+
+  backend:
+    build:
+      context: ./be
+    ports:
+      - "5001:5001"  # Access the backend at localhost:5000
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/mydatabase  # Database connection URL
+    volumes:
+      - ./be:/app  # Mount backend code (optional if you need live refresh on the backend as well)
 
 volumes:
-  db_data:
+  db_data:  # Define the 'db_data' volume here
