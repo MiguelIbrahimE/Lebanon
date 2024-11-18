@@ -1,0 +1,113 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f8f3; /* Softer beige for less strain on eyes */
+  color: #333333; /* Neutral text color */
+}
+
+/* Top Navigation */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.95); /* Fully black with 95% opacity for better contrast */
+  color: #CD7F32; /* Bronze text */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  flex: 1; /* Push nav links and search container to the right */
+}
+
+.logo h1 {
+  font-family: "Pacifico", cursive; /* Elegant cursive font */
+  color: #CD7F32; /* Bronze color for the logo */
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Vertically center the nav links */
+  gap: 1rem; /* Reduced spacing for compactness */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #CD7F32; /* Bronze color for nav links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f4a460; /* Light bronze color on hover */
+  text-decoration: underline;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center; /* Align input and icon vertically */
+  gap: 0.5rem; /* Proper spacing between input and icon */
+}
+
+.search-icon {
+  background: none;
+  border: none;
+  color: #CD7F32; /* Bronze icon */
+  font-size: 1.5rem; /* Appropriate size for the magnifying glass */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px; /* Remove default button padding */
+}
+
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  padding: 6rem 2rem;
+  background-color: #019E3F; /* Matte green background */
+  color: rgba(0, 0, 0, 0.95); /* White text for contrast */
+}
+
+.welcome-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.95); /* Pure white for contrast */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.welcome-text {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8; /* Better readability */
+  color: rgba(0, 0, 0, 0.95); /* Softer white for body text */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .welcome-heading {
+    font-size: 2.5rem;
+  }
+
+  .welcome-text {
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}

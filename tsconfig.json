@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                           // Target modern JavaScript
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],  // Libraries to include
+    "allowJs": true,                           // Allow JavaScript files
+    "skipLibCheck": true,                      // Skip type checks on declaration files
+    "esModuleInterop": true,                   // Enable compatibility with CommonJS
+    "allowSyntheticDefaultImports": true,      // Allow default imports from modules with no default export
+    "strict": true,                            // Enable all strict type-checking options
+    "forceConsistentCasingInFileNames": true,  // Disallow inconsistent casing in file names
+    "module": "ESNext",                        // Use the ES module system
+    "moduleResolution": "Node",               // Resolve modules in Node.js style
+    "resolveJsonModule": true,                 // Allow importing JSON files
+    "isolatedModules": true,                   // Ensure each file can be safely transpiled without type info
+    "noEmit": true,                            // Do not emit compiled output
+    "jsx": "react-jsx"                         // Use the modern JSX transform
+  },
+  "include": ["src"],                          // Include all files in the src directory
+  "exclude": ["node_modules", "build"],        // Exclude these directories
+  "typeAcquisition": {
+    "enable": true                             // Automatically acquire type declarations
+  }
+}
