@@ -70,20 +70,19 @@ body {
   padding: 5px; /* Remove default button padding */
 }
 
-
 /* Welcome Section */
 .welcome-section {
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 5.5rem 2rem;
   background-color: #019E3F; /* Matte green background */
-  color: rgba(0, 0, 0, 0.95); /* White text for contrast */
+  color: rgba(0, 0, 0, 0.95); /* Text color */
 }
 
 .welcome-heading {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin: 0;
-  color: rgba(0, 0, 0, 0.95); /* Pure white for contrast */
+  color: rgba(0, 0, 0, 0.95); /* Text color */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
@@ -94,7 +93,64 @@ body {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.8; /* Better readability */
-  color: rgba(0, 0, 0, 0.95); /* Softer white for body text */
+  color: rgba(0, 0, 0, 0.95); /* Text color */
+}
+
+/* Cards Section */
+.cards-section {
+  padding: 4rem 2rem;
+}
+
+.cards-section .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures cards stack on smaller screens */
+  gap: 1.5rem;
+}
+
+.cards-section .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px; /* Rounded corners for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 300px; /* Maximum width for cards */
+  height: 100%; /* Ensures equal card height */
+}
+
+.cards-section .card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.cards-section .card-img-top {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensures image scales properly */
+}
+
+.cards-section .card-body {
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-section .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.cards-section .card-text {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0;
 }
 
 /* Media Queries for Responsiveness */
@@ -108,6 +164,15 @@ body {
   }
 
   .nav-links {
+    gap: 1rem;
+  }
+
+  .search-input {
+    width: 150px;
+  }
+
+  .cards-section .row {
+    flex-direction: column; /* Cards stack vertically on smaller screens */
     gap: 1rem;
   }
 }
