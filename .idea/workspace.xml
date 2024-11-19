@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e224315-401a-45e4-b139-6d4d6fba5a97" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/be/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/be/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/src/css/colors.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/be/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/fe/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/fe/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/fe/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/fe/src/css/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/fe/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/fe/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe" beforeDir="false" afterPath="$PROJECT_DIR$/fe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +36,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MiguelIbrahimE/Lebanon.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/MiguelIbrahimE/Lebanon&quot;,
     &quot;accountId&quot;: &quot;64ec5cb2-776b-4c9e-990e-99eeae8705ac&quot;
   }
 }</component>
@@ -101,7 +85,9 @@
       <workItem from="1731585772799" duration="3666000" />
       <workItem from="1731679552095" duration="51000" />
       <workItem from="1731927254902" duration="3327000" />
-      <workItem from="1731943521352" duration="3919000" />
+      <workItem from="1731943521352" duration="7710000" />
+      <workItem from="1731959688925" duration="599000" />
+      <workItem from="1732021197792" duration="170000" />
     </task>
     <servers />
   </component>
