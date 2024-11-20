@@ -61,13 +61,13 @@ body {
 .search-icon {
   background: none;
   border: none;
-  color: #CD7F32; /* Bronze icon */
-  font-size: 1.5rem; /* Appropriate size for the magnifying glass */
+  color: #bfa6a6; /* Bronze icon */
+  font-size: 1.2rem; /* Appropriate size for the magnifying glass */
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px; /* Remove default button padding */
+  padding-left: 15px; /* Remove default button padding */
 }
 
 /* Welcome Section */
@@ -103,9 +103,8 @@ body {
 
 .cards-section .row {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Ensures cards stack on smaller screens */
-  gap: 1.5rem;
+  justify-content: space-around; /* Ensures even spacing between cards */
+  gap: 1.5rem; /* Proper spacing between rows */
 }
 
 .cards-section .card {
@@ -153,14 +152,62 @@ body {
   margin: 0.5rem 0;
 }
 
+/* Single Cards Section */
+.single-cards-section {
+  padding: 4rem 2rem;
+  border-top: 1px solid #ccc; /* Bordered separation */
+  text-align: left; /* Align text on the left */
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Space between image and text */
+}
+
+.single-card {
+  position: relative;
+  max-width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  flex: 1;
+}
+
+.single-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.single-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.single-card .hover-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.single-card:hover .hover-text {
+  opacity: 1; /* Reveal text on hover */
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .welcome-heading {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .welcome-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .nav-links {
@@ -173,6 +220,24 @@ body {
 
   .cards-section .row {
     flex-direction: column; /* Cards stack vertically on smaller screens */
-    gap: 1rem;
+    gap: 1.5rem;
   }
+
+  .single-cards-section {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center;
+  }
+
+  .single-card {
+    max-width: 100%;
+  }
+}
+/* Highlight for 'on' in Lebanon */
+.highlight-olive {
+  color: #019E3F; /* Dark olive green */
+  font-weight: bold;
+}
+.red{
+  color:red;
+  font-weight:bold;
 }

@@ -18,12 +18,15 @@ const App: React.FC = () => {
             {/* Top Navigation */}
             <nav className="top-nav">
                 <div className="logo">
-                    <h1>i - Lebanon</h1>
+                    <h1>
+                        Leban<span className="highlight-olive">on</span>
+                    </h1>
+
                 </div>
                 <ul className="nav-links">
-                    <li><a href="#destinations">Destinations</a></li>
-                    <li><a href="#food">Food</a></li>
-                    <li><a href="#emergency">Emergency</a></li>
+                    <li><a href="./Tourism.tsx">Destinations</a></li>
+                    <li><a href="./Food.tsx">Food</a></li>
+                    <li><a href="./emergency.tsx"><span className="red">Emergency</span></a></li>
                 </ul>
                 <div className="search-container">
                     {showSearchInput && (
@@ -39,7 +42,7 @@ const App: React.FC = () => {
                         className="search-icon"
                         onClick={handleSearch}
                     >
-                        <FaSearch />
+                        <FaSearch/>
                     </button>
                 </div>
             </nav>
@@ -48,7 +51,8 @@ const App: React.FC = () => {
             <section className="welcome-section">
                 <h1 className="welcome-heading">Discover Lebanon</h1>
                 <p className="welcome-text">
-                     From its stunning beaches to its majestic mountains. Find all the resources you need for the perfect trip, look up essential information on living, studying, and working.
+                    From its stunning beaches to its majestic mountains. Find all the resources you need for the perfect
+                    trip, look up essential information on living, studying, and working.
                 </p>
             </section>
 
@@ -64,9 +68,9 @@ const App: React.FC = () => {
                                 alt="Baalbek"
                             />
                             <div className="card-body">
-                                <h5 className="card-title">Baalbek</h5>
+                                <h5 className="card-title">Tourism</h5>
                                 <p className="card-text">
-                                    Explore the magnificent ruins of Baalbek, a UNESCO World Heritage site.
+                                    Explore the many magnificent touristic destinations.
                                 </p>
                             </div>
                         </div>
@@ -82,12 +86,45 @@ const App: React.FC = () => {
                             <div className="card-body">
                                 <h5 className="card-title">Lebanese Cuisine</h5>
                                 <p className="card-text">
-                                    Indulge in the world-renowned Lebanese food and hospitality.
+                                    Experience Lebanese food and hospitality.
                                 </p>
                             </div>
                         </div>
                     </div>
+                    {/* Card 3 */}
+                    <div className="col-md-4">
+                        <div className="card">
+                            <img
+                                src="/events.png"
+                                className="card-img-top"
+                                alt="Adventure"
+                            />
+                            <div className="card-body">
+                                <h5 className="card-title">Events</h5>
+                                <p className="card-text">
+                                    Check out the current on-going events.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            {/* Single Cards Section */}
+            <section className="single-cards-section container mt-5">
+                <div className="single-card">
+                    <a href="/explore-more">
+                        <img src="/AUB.png" alt="Explore More" className="single-card-img"/>
+                        <div className="hover-text">Education</div>
+                    </a>
+                </div>
+            </section>
+            <section className="single-cards-section container mt-5">
+                <div className="single-card">
+                    <a href="/explore-more">
+                        <img src="/helem.png" alt="Explore More" className="single-card-img"/>
+                        <div className="hover-text">Organizations</div>
+                    </a>
                 </div>
             </section>
         </div>
