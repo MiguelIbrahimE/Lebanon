@@ -1,6 +1,6 @@
 import React from "react";
 
-const Food: React.FC = () => {
+const Emergency: React.FC = () => {
     return (
         <div className="page-content">
             <h1>Lebanese Cuisine</h1>
@@ -9,4 +9,4 @@ const Food: React.FC = () => {
     );
 };
 
-export default Food;
+export default Emergency;

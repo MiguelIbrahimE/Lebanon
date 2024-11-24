@@ -1,0 +1,197 @@
+/* General Container for Tourism Page */
+.tourism-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9f8f3; /* Softer beige for less strain on eyes */
+}
+
+/* Map Section */
+.map-section {
+    display: flex; /* Set flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center align items horizontally */
+    gap: 2rem; /* Space between text and image */
+    margin-bottom: 3rem; /* Space below the section */
+}
+
+.text-content {
+    max-width: 40%; /* Restrict text width */
+    text-align: left; /* Align text to the left */
+}
+
+.text-content .headline {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0 0 1rem 0;
+}
+
+.text-content .disclaimer {
+    font-size: 1rem;
+    color: #666;
+}
+
+.map-image {
+    max-width: 50%; /* Adjust width to fit next to text */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Horizontal Line Separator */
+.separator {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 2rem 0;
+}
+
+/* Destinations Section */
+.destinations-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.destinations-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Top Destination */
+.top-destination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.top-destination-image {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-destination-title {
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem 0;
+    color: #333;
+}
+
+.top-destination-description {
+    font-size: 1rem;
+    color: #666;
+    max-width: 80%;
+    line-height: 1.6;
+}
+
+/* Next Destinations */
+.next-destinations {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.next-destination {
+    flex: 1;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.next-destination-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.next-destination-title {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #fff; /* White background for contrast */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Ensure image fits within the card */
+}
+
+.card-title {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 1rem 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .map-section {
+        flex-direction: column; /* Stack text and image */
+        gap: 1rem; /* Adjust gap for smaller screens */
+    }
+
+    .text-content {
+        max-width: 90%; /* Allow text to take more space */
+        text-align: center; /* Center-align for smaller screens */
+    }
+
+    .map-image {
+        max-width: 90%; /* Adjust image size for small screens */
+    }
+
+    .cards-grid {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 1.5rem; /* Smaller gap for smaller screens */
+    }
+
+    .card {
+        width: 90%; /* Cards take up more width on small screens */
+    }
+
+    .top-destination-image {
+        max-width: 90%;
+    }
+
+    .next-destinations {
+        flex-direction: column; /* Stack the next destinations vertically */
+        gap: 1.5rem;
+    }
+
+    .next-destination {
+        max-width: 90%;
+    }
+}

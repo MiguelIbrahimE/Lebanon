@@ -1,10 +1,10 @@
 # Use an official Node runtime as the base image
 FROM node:22
 
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /app
 
-# Install dependencies
+# Copy package.json and install dependencies first (cache optimization)
 COPY package*.json ./
 RUN npm install
 
