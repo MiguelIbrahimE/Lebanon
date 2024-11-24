@@ -5,16 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e224315-401a-45e4-b139-6d4d6fba5a97" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Figma/example-cards.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be/app/tourism/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe/public/cedars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe/public/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe/public/jeita.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe/src/css/Tourism.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/be/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/be/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/be/app/tourism/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe" beforeDir="false" afterPath="$PROJECT_DIR$/fe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/fe/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/fe/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/fe/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/fe/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe/src/Tourism.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/fe/src/Tourism.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe/src/emergency.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/fe/src/emergency.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/fe/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe/src/reportWebVitals.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +45,7 @@
         <entry key="$PROJECT_DIR$" value="database" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/fe" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -59,7 +70,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "structure-dev",
     "last_opened_file_path": "/Users/miguelibrahim/Desktop/Lebanon",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -72,8 +83,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Figma" />
       <recent name="$PROJECT_DIR$/fe/public" />
+      <recent name="$PROJECT_DIR$/Figma" />
       <recent name="$PROJECT_DIR$/fe/public/img" />
       <recent name="$PROJECT_DIR$/fe/src/img" />
       <recent name="$PROJECT_DIR$/fe/src/css" />
@@ -104,7 +115,9 @@
       <workItem from="1732093274854" duration="7273000" />
       <workItem from="1732121053713" duration="77000" />
       <workItem from="1732131127936" duration="6528000" />
-      <workItem from="1732283156735" duration="2964000" />
+      <workItem from="1732283156735" duration="5572000" />
+      <workItem from="1732289754976" duration="6869000" />
+      <workItem from="1732445969888" duration="8707000" />
     </task>
     <servers />
   </component>
