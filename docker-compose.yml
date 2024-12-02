@@ -1,51 +1,18 @@
 services:
-  mongodb:
-    image: mongo:6.0
-    container_name: mongodb
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
-    networks:
-      - app_network
-    restart: always
-
-  backend:
-    build:
-      context: ./be
-    container_name: backend
-    depends_on:
-      - mongodb
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./be:/app/be
-      - /app/be/node_modules
-    environment:
-      - MONGO_URI=mongodb://mongodb:27017/mydatabase
-    networks:
-      - app_network
-    restart: always
-    command: npm run start:dev
-
-  frontend:
+  react-app:
     build:
       context: ./fe
-    container_name: frontend
-    depends_on:
-      - backend
-    ports:
-      - "3001:3000"
+      dockerfile: Dockerfile
+    container_name: react-app
+    working_dir: /app
     volumes:
-      - ./fe/app:/app/fe/app
-      - /app/fe/app/node_modules
-    networks:
-      - app_network
-    restart: always
-    command: npm start
-
-volumes:
-  mongo_data:
-
-networks:
-  app_network:
+      - ./fe:/app # Mount the React app directory
+      - /app/node_modules # Prevent overriding node_modules
+    ports:
+      - "3000:3000" # Map port 3000 on the host to port 3000 in the container
+    stdin_open: true
+    tty: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Enable polling for file changes
+    command: >
+      sh -c "npm install && npm start"
