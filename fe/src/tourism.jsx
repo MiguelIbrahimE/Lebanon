@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./CSS/tourism.css";
 import ReactAnimatedWeather from 'react-animated-weather';
+import { MapContainer, TileLayer, Marker, Polyline, Popup } from 'react-leaflet';
 
 const Tourism = () => {
     const [baalbekWeather, setBaalbekWeather] = useState(null);
@@ -11,7 +12,14 @@ const Tourism = () => {
     const baalbekCoords = { lat: 34.0060, lon: 36.2039 };
     const pigeonRocksCoords = { lat: 33.8970, lon: 35.4743 };
 
-    // Weather code to icon and condition mapping
+    // Transport stops (dummy data, modify as needed)
+    const transportStops = [
+        { name: "Beirut Central", lat: 33.8938, lon: 35.5018 },
+        { name: "East Terminal", lat: 33.8500, lon: 35.8667 },
+        { name: "North Junction", lat: 34.0000, lon: 35.7000 }
+    ];
+
+    // Map weather codes to conditions/icons
     const weatherCodeMap = {
         0:  {condition: "Clear sky", icon: "CLEAR_DAY"},
         1:  {condition: "Mainly clear", icon: "PARTLY_CLOUDY_DAY"},
@@ -28,10 +36,9 @@ const Tourism = () => {
         80: {condition: "Rain showers", icon: "RAIN"},
         81: {condition: "Moderate rain showers", icon: "RAIN"},
         82: {condition: "Violent rain showers", icon: "RAIN"},
-        95: {condition: "Thunderstorm", icon: "RAIN"} // Adjust as needed
+        95: {condition: "Thunderstorm", icon: "RAIN"}
     };
 
-    // Function to get weather from Open-Meteo
     const fetchWeather = (lat, lon, setState) => {
         fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`)
             .then(res => res.json())
@@ -48,10 +55,12 @@ const Tourism = () => {
     useEffect(() => {
         // Fetch Baalbek Weather
         fetchWeather(baalbekCoords.lat, baalbekCoords.lon, setBaalbekWeather);
-
         // Fetch Pigeon Rocks Weather
         fetchWeather(pigeonRocksCoords.lat, pigeonRocksCoords.lon, setPigeonRocksWeather);
     }, []);
+
+    // Extract coordinates for polyline
+    const polylinePositions = transportStops.map(s => [s.lat, s.lon]);
 
     return (
         <div>
@@ -114,6 +123,36 @@ const Tourism = () => {
                                 <h3>Pigeon Rocks</h3>
                             </div>
                         </Link>
+                    </div>
+                </section>
+
+                {/* New Large Card with Map */}
+                <section className="tourism-cards-section">
+                    <div className="container">
+                        <div className="map-card p-3" style={{background: '#fff', boxShadow:'0 2px 8px rgba(0,0,0,0.1)', borderRadius:'8px'}}>
+                            <h2 className="mb-4 text-center">Public Transportation Network</h2>
+                            <div style={{height: '500px'}}>
+                                <MapContainer
+                                    center={[33.8938, 35.5018]}
+                                    zoom={8}
+                                    style={{height:'100%', width:'100%'}}
+                                >
+                                    <TileLayer
+                                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                    />
+                                    {transportStops.map((stop, idx) => (
+                                        <Marker key={idx} position={[stop.lat, stop.lon]}>
+                                            <Popup>{stop.name}</Popup>
+                                        </Marker>
+                                    ))}
+                                    <Polyline positions={polylinePositions} color="red" />
+                                </MapContainer>
+                            </div>
+                            <p className="mt-3 text-center">
+                                This map shows our planned public transportation stops and route. (Currently conceptual)
+                            </p>
+                        </div>
                     </div>
                 </section>
             </div>
