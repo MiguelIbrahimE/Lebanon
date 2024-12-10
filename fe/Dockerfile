@@ -1,18 +1,20 @@
-# Use the official Node.js image as the base
-FROM node:18-alpine
+# Use the Node.js LTS image
+FROM node:18
 
-# Set the working directory to the 'app' folder
+# Set the working directory
 WORKDIR /app
 
-# Copy package files and install dependencies
-COPY package.json app/package-lock.json ./
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
 RUN npm install
 
-# Copy the rest of the app files
-COPY app/ .
+# Copy the rest of the application
+COPY . .
 
-# Expose the app port
+# Expose port 3000
 EXPOSE 3000
 
-# Run React in development mode for live reload
+# Start the application
 CMD ["npm", "start"]
