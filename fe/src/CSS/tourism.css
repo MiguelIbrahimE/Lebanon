@@ -1,0 +1,120 @@
+.tourism-cards-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.location-card {
+    display: block;
+    width: calc(50% - 1rem);
+    background: #fff;
+    border-radius: 0;
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.location-card:hover {
+    transform: scale(1.02); /* Slight pop out */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Card Image Section */
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 300px; /* fix height for uniformity */
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+/* Darken image on hover */
+.location-card:hover .card-image img {
+    opacity: 0.7; /* darken image */
+}
+
+/* Weather Overlay */
+.weather-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255,255,255,0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 2;
+}
+
+/* Hover Overlay - shows name centered on hover (desktop) */
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+}
+
+.hover-overlay h3 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.location-card:hover .hover-overlay {
+    opacity: 1;
+}
+
+/* Location Info - shown on mobile always, hidden on desktop */
+.location-info {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 0;
+    color: #333;
+}
+
+/* Desktop: hide location-info (since hover shows name in overlay) */
+@media (min-width: 769px) {
+    .location-info {
+        display: none;
+    }
+}
+
+/* Mobile: show location-info */
+@media (max-width: 768px) {
+    .location-info {
+        display: block;
+        margin-top: 0.5rem;
+    }
+    /* On mobile, no hover effect needed, so hover-overlay won't matter */
+    .hover-overlay {
+        display: none;
+    }
+}
